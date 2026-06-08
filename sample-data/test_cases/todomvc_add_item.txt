@@ -1,0 +1,2 @@
+Add a todo item called "Buy milk" and verify it appears in the list.
+
