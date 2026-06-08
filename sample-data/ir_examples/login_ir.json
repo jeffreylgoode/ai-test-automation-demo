@@ -1,0 +1,36 @@
+{
+    "test_name": "login_valid_credentials",
+    "description": "User logs in with valid credentials",
+    "steps": [
+        {
+            "action": "navigate",
+            "target": "login_page"
+        },
+        {
+            "action": "input",
+            "target": "username_field",
+            "value": "valid_user"
+        },
+        {
+            "action": "input",
+            "target": "password_field",
+            "value": "valid_password"
+        },
+        {
+            "action": "click",
+            "target": "login_button"
+        },
+        {
+            "action": "assert",
+            "target": "dashboard_page",
+            "condition": "visible"
+        }
+    ],
+    "metadata": {
+        "priority": "high",
+        "tags": [
+            "smoke",
+            "auth"
+        ]
+    }
+}
