@@ -1,7 +1,0 @@
-Test Case: Login with valid credentials
-
-1. Navigate to the login page
-2. Enter username "valid_user"
-3. Enter password "valid_password"
-4. Click the Login button
-5. Verify that the dashboard page is visible
