@@ -3,6 +3,110 @@ Public demo repository for an AI-assisted deterministic test automation pipeline
 
 by Jeff Goode
 
+## 📐 CRISP‑DM Framework Alignment
+
+This project follows the CRISP‑DM methodology to structure the transformation of natural‑language test cases into deterministic, executable UI tests. Although the system is not a traditional ML model, the pipeline maps cleanly onto CRISP‑DM because it processes unstructured input, transforms it into structured representations, and evaluates outcomes through execution artifacts.
+
+---
+
+### **1. Business Understanding**
+
+Modern UI test automation is slow, brittle, and expensive. Teams spend significant time writing tests, maintaining selectors, and diagnosing failures.
+
+**Business Objective:**  
+Reduce the cost and effort of UI test automation by automatically converting natural‑language test cases into stable, executable tests with deterministic behavior.
+
+**Guiding Question:**  
+**How can we automatically transform natural‑language test cases into reliable UI tests that reduce manual QA effort and improve test stability?**
+
+---
+
+### **2. Data Understanding**
+
+In real software teams, the “data” that drives test automation does not begin as structured test steps. It begins as **human‑authored intent**, typically expressed in several layers:
+
+- **User stories** — high‑level descriptions of user goals  
+- **Acceptance criteria** — conditions that define “done”  
+- **Manual test cases** — step‑by‑step instructions written by QA  
+- **Natural‑language test steps** — the final form before automation  
+
+These inputs are unstructured, inconsistent, and vary widely in style and detail.  
+The goal of this project is to transform these human‑authored artifacts into structured representations that can be executed deterministically.
+
+The system therefore works with several forms of “data”:
+
+- **User stories and acceptance criteria** (initial product intent)  
+- **Natural‑language test cases** (QA intent)  
+- **Intermediate Representations (IR)** describing structured test steps  
+- **UI model and selector mappings** (application structure and stable targets)  
+- **Execution artifacts** (logs, traces, screenshots)  
+- **Failure patterns** (signals used for analysis and classification)
+
+This combination of unstructured and structured data forms the foundation of the automation pipeline.
+
+
+### **3. Data Preparation**
+
+Data preparation corresponds to structuring and normalizing the inputs:
+
+- Parsing natural‑language test cases into IR  
+- Normalizing actions and targets  
+- Resolving logical targets into selectors via the mapping layer  
+- Validating IR against the app model  
+
+This phase ensures that downstream code generation is deterministic and stable.
+
+---
+
+### **4. Modeling**
+
+In this project, “modeling” refers to building the compiler‑style pipeline that transforms structured IR into executable test code:
+
+- IR → deterministic Python/Selenium/Playwright code  
+- Selector resolution strategies  
+- Stable action sequencing  
+- Deterministic test generation  
+
+This phase defines how the system behaves when converting structured intent into executable automation.
+
+---
+
+### **5. Evaluation**
+
+Evaluation occurs through test execution and artifact analysis:
+
+- Running generated tests  
+- Capturing logs, traces, and screenshots  
+- Detecting failures  
+- Classifying failure types  
+- Assessing selector stability and determinism  
+
+This phase validates whether the generated tests behave reliably in real execution environments.
+
+---
+
+### **6. Deployment**
+
+Deployment focuses on integrating the pipeline into real workflows:
+
+- Running multiple test cases in batch  
+- Integrating with CI/CD  
+- Versioning IR, mappings, and selectors  
+- Producing structured reports for engineering teams  
+- Scaling the pipeline to larger test suites  
+
+This phase ensures the system can operate as part of a production automation strategy.
+
+---
+
+### **Summary**
+
+By aligning the project with CRISP‑DM, the pipeline becomes a clear, structured, and repeatable process:
+
+**Natural‑language → IR → Mapping → Code → Execution → Artifacts → Analysis**
+
+This framing makes the project easier to understand, maintain, and extend — and positions it as a serious, architecture‑driven automation system.
+
 # **AI Test Automation Demo**  
 *A public demonstration of a deterministic, AI‑assisted test automation pipeline.*
 
