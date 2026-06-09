@@ -1,0 +1,37 @@
+[
+    {
+        "action": "navigate",
+        "logical_target": "login_page",
+        "resolved": {
+            "error": "Unknown logical target: login_page"
+        }
+    },
+    {
+        "action": "input",
+        "logical_target": "username_field",
+        "resolved": {
+            "error": "Unknown logical target: username_field"
+        }
+    },
+    {
+        "action": "input",
+        "logical_target": "password_field",
+        "resolved": {
+            "error": "Unknown logical target: password_field"
+        }
+    },
+    {
+        "action": "click",
+        "logical_target": "login_button",
+        "resolved": {
+            "error": "Unknown logical target: login_button"
+        }
+    },
+    {
+        "action": "assert",
+        "logical_target": "dashboard_page",
+        "resolved": {
+            "error": "Unknown logical target: dashboard_page"
+        }
+    }
+]

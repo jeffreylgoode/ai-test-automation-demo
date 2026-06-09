@@ -1,0 +1,43 @@
+{
+    "test_name": "todomvc_add_and_complete_items",
+    "description": "Add \u201cbuy milk\u201d, add \u201cget gas in Susie\u2019s car\u201d, then complete \u201cbuy milk\u201d, and complete \u201cget gas in Susie\u2019s car\u201d.\n",
+    "steps": [
+        {
+            "action": "input",
+            "target": "new_todo_input",
+            "value": "buy milk",
+            "selector": "input.new-todo"
+        },
+        {
+            "action": "press",
+            "target": "new_todo_input",
+            "key": "Enter",
+            "selector": "input.new-todo"
+        },
+        {
+            "action": "input",
+            "target": "new_todo_input",
+            "value": "get gas in Susie\u2019s car",
+            "selector": "input.new-todo"
+        },
+        {
+            "action": "press",
+            "target": "new_todo_input",
+            "key": "Enter",
+            "selector": "input.new-todo"
+        },
+        {
+            "action": "click",
+            "target": "todo_item_1_checkbox",
+            "selector": null
+        },
+        {
+            "action": "click",
+            "target": "todo_item_2_checkbox",
+            "selector": null
+        }
+    ],
+    "metadata": {
+        "priority": "high"
+    }
+}

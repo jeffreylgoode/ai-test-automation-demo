@@ -1,0 +1,7 @@
+{
+    "test_file": "../generated-tests/todomvc_add_item_test.py",
+    "return_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/Users/jeffreylgoode/Documents/ai-test-automation-demo/notebooks/../generated-tests/todomvc_add_item_test.py\", line 1, in <module>\n    from playwright.async_api import async_playwright, expect\nModuleNotFoundError: No module named 'playwright'\n",
+    "artifacts_dir": "../artifacts/todomvc_run/run_20260609_091646"
+}

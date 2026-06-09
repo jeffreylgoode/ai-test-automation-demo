@@ -1,0 +1,7 @@
+{
+    "test_file": "../generated-tests/todomvc_add_item_test.py",
+    "return_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "artifacts_dir": "../artifacts/todomvc_run/run_20260609_094822"
+}
