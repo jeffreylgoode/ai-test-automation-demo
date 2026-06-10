@@ -1,0 +1,25 @@
+{
+  "test_name": "test_name:_home_page_test",
+  "steps": [
+    {
+      "action": "navigate",
+      "value": "https://ai-test-automation-demo.onrender.com/"
+    },
+    {
+      "action": "assert_visible",
+      "selector": "the heading \"Hello from your Flask Demo App!\" is"
+    },
+    {
+      "action": "assert_visible",
+      "selector": "the \"Login\" link is"
+    },
+    {
+      "action": "click",
+      "selector": "Click the \"Login\" link."
+    },
+    {
+      "action": "navigate",
+      "value": "/login."
+    }
+  ]
+}

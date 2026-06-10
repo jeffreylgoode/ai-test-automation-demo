@@ -1,0 +1,12 @@
+Test Name: Logout Flow Test
+Goal: Verify logout returns the user to the home page.
+URL: https://ai-test-automation-demo.onrender.com/logout
+
+Steps:
+1. Log in successfully.
+2. Click the Logout link.
+3. Verify the browser navigates to /.
+4. Verify the home page heading is visible.
+
+Expected Result:
+User is logged out and returned to the home page.

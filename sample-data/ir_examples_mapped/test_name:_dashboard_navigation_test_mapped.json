@@ -1,0 +1,51 @@
+{
+  "test_name": "test_name:_dashboard_navigation_test",
+  "steps": [
+    {
+      "action": "navigate",
+      "value": "https://ai-test-automation-demo.onrender.com/dashboard"
+    },
+    {
+      "action": "enter_text",
+      "selector": "#username",
+      "value": "demo"
+    },
+    {
+      "action": "enter_text",
+      "selector": "#password",
+      "value": "password123"
+    },
+    {
+      "action": "click",
+      "selector": "#login-button"
+    },
+    {
+      "action": "assert_visible",
+      "selector": "the \"Back to Home\" link is"
+    },
+    {
+      "action": "click",
+      "selector": "Click \"Back to Home\"."
+    },
+    {
+      "action": "navigate",
+      "value": "/."
+    },
+    {
+      "action": "navigate",
+      "value": "/dashboard"
+    },
+    {
+      "action": "assert_visible",
+      "selector": "the \"Logout\" link is"
+    },
+    {
+      "action": "click",
+      "selector": "Click \"Logout\"."
+    },
+    {
+      "action": "navigate",
+      "value": "/."
+    }
+  ]
+}

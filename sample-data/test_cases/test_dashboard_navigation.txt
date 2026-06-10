@@ -1,0 +1,16 @@
+Test Name: Dashboard Navigation Test
+Goal: Verify dashboard links work correctly.
+URL: https://ai-test-automation-demo.onrender.com/dashboard
+
+Steps:
+1. Log in successfully.
+2. Verify the "Back to Home" link is visible.
+3. Click "Back to Home".
+4. Verify the browser navigates to /.
+5. Navigate back to the dashboard.
+6. Verify the "Logout" link is visible.
+7. Click "Logout".
+8. Verify the browser navigates to /.
+
+Expected Result:
+Dashboard links work correctly and logout returns the user to the home page.

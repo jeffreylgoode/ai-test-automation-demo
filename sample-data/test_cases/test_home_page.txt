@@ -1,0 +1,14 @@
+Test Name: Home Page Test
+Goal: Verify the home page loads and shows expected content.
+URL: https://ai-test-automation-demo.onrender.com/
+
+Steps:
+1. Navigate to the home page.
+2. Verify the page loads successfully.
+3. Verify the heading "Hello from your Flask Demo App!" is visible.
+4. Verify the "Login" link is visible.
+5. Click the "Login" link.
+6. Verify the browser navigates to /login.
+
+Expected Result:
+The home page loads and displays the correct heading and login link.

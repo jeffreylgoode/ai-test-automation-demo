@@ -1,1 +1,0 @@
-Add “buy milk”, add “get gas in Susie’s car”, then complete “buy milk”, and complete “get gas in Susie’s car”.

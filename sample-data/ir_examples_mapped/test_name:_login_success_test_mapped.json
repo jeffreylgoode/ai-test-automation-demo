@@ -1,0 +1,21 @@
+{
+  "test_name": "test_name:_login_success_test",
+  "steps": [
+    {
+      "action": "navigate",
+      "value": "https://ai-test-automation-demo.onrender.com/login"
+    },
+    {
+      "action": "click",
+      "selector": "Click the Login button."
+    },
+    {
+      "action": "navigate",
+      "value": "/dashboard."
+    },
+    {
+      "action": "assert_visible",
+      "selector": "the text \"Welcome to the Dashboard!\" is"
+    }
+  ]
+}

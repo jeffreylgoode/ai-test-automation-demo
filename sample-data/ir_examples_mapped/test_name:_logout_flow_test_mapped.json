@@ -1,0 +1,35 @@
+{
+  "test_name": "test_name:_logout_flow_test",
+  "steps": [
+    {
+      "action": "navigate",
+      "value": "https://ai-test-automation-demo.onrender.com/logout"
+    },
+    {
+      "action": "enter_text",
+      "selector": "#username",
+      "value": "demo"
+    },
+    {
+      "action": "enter_text",
+      "selector": "#password",
+      "value": "password123"
+    },
+    {
+      "action": "click",
+      "selector": "#login-button"
+    },
+    {
+      "action": "click",
+      "selector": "Click the Logout link."
+    },
+    {
+      "action": "navigate",
+      "value": "/."
+    },
+    {
+      "action": "assert_visible",
+      "selector": "the home page heading is"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+Test Name: Login Success Test
+Goal: Verify a user can log in with valid credentials.
+URL: https://ai-test-automation-demo.onrender.com/login
+
+Credentials:
+Username: demo
+Password: password123
+
+Steps:
+1. Navigate to the login page.
+2. Enter username "demo".
+3. Enter password "password123".
+4. Click the Login button.
+5. Verify the browser navigates to /dashboard.
+6. Verify the text "Welcome to the Dashboard!" is visible.
+
+Expected Result:
+User is redirected to the dashboard and sees the welcome message.

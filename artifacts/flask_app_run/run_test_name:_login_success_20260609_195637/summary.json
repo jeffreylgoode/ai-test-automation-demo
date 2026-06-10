@@ -1,0 +1,7 @@
+{
+  "test_file": "../generated-tests/test_name:_login_success_test_test.py",
+  "return_code": 1,
+  "stdout": "",
+  "stderr": "  File \"/Users/jeffreylgoode/Documents/ai-test-automation-demo/notebooks/../generated-tests/test_name:_login_success_test_test.py\", line 10\n    await page.fill(\"demo\".\", \"Enter username\")\n                                             ^\nSyntaxError: unterminated string literal (detected at line 10)\n",
+  "artifacts_dir": "../artifacts/flask_app_run/run_test_name:_login_success_20260609_195637"
+}

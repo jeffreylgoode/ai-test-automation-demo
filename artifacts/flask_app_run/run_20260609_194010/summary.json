@@ -1,0 +1,7 @@
+{
+    "test_file": "../generated-tests/render_app_test_test.py",
+    "return_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "artifacts_dir": "../artifacts/flask_app_run/run_20260609_194010"
+}

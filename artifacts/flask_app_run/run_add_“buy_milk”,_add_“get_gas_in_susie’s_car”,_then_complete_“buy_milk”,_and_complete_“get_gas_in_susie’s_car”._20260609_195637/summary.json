@@ -1,0 +1,7 @@
+{
+  "test_file": "../generated-tests/add_\u201cbuy_milk\u201d,_add_\u201cget_gas_in_susie\u2019s_car\u201d,_then_complete_\u201cbuy_milk\u201d,_and_complete_\u201cget_gas_in_susie\u2019s_car\u201d._test.py",
+  "return_code": 1,
+  "stdout": "",
+  "stderr": "  File \"/Users/jeffreylgoode/Documents/ai-test-automation-demo/notebooks/../generated-tests/add_\u201cbuy_milk\u201d,_add_\u201cget_gas_in_susie\u2019s_car\u201d,_then_complete_\u201cbuy_milk\u201d,_and_complete_\u201cget_gas_in_susie\u2019s_car\u201d._test.py\", line 4\n    async def test_add_\u201cbuy_milk\u201d,_add_\u201cget_gas_in_susie\u2019s_car\u201d,_then_complete_\u201cbuy_milk\u201d,_and_complete_\u201cget_gas_in_susie\u2019s_car\u201d.():\n                       ^\nSyntaxError: invalid character '\u201c' (U+201C)\n",
+  "artifacts_dir": "../artifacts/flask_app_run/run_add_\u201cbuy_milk\u201d,_add_\u201cget_gas_in_susie\u2019s_car\u201d,_then_complete_\u201cbuy_milk\u201d,_and_complete_\u201cget_gas_in_susie\u2019s_car\u201d._20260609_195637"
+}

@@ -1,0 +1,7 @@
+{
+  "test_file": "../generated-tests/add_a_todo_item_called_\"buy_milk\"_and_verify_it_appears_in_the_list._test.py",
+  "return_code": 1,
+  "stdout": "",
+  "stderr": "  File \"/Users/jeffreylgoode/Documents/ai-test-automation-demo/notebooks/../generated-tests/add_a_todo_item_called_\"buy_milk\"_and_verify_it_appears_in_the_list._test.py\", line 4\n    async def test_add_a_todo_item_called_\"buy_milk\"_and_verify_it_appears_in_the_list.():\n                                          ^^^^^^^^^^\nSyntaxError: expected '('\n",
+  "artifacts_dir": "../artifacts/flask_app_run/run_add_a_todo_item_called_\"buy_milk\"_and_verify_it_appears_in_the_list._20260609_195637"
+}

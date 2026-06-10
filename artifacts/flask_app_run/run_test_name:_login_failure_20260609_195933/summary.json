@@ -1,0 +1,7 @@
+{
+  "test_file": "../generated-tests/test_name:_login_failure_test_test.py",
+  "return_code": 1,
+  "stdout": "",
+  "stderr": "  File \"/Users/jeffreylgoode/Documents/ai-test-automation-demo/notebooks/../generated-tests/test_name:_login_failure_test_test.py\", line 11\n    await expect(page.locator(\"body\")).to_have_text(\"the error message \"Invalid username or password\")\n                                                                                                    ^\nSyntaxError: unterminated string literal (detected at line 11)\n",
+  "artifacts_dir": "../artifacts/flask_app_run/run_test_name:_login_failure_20260609_195933"
+}
