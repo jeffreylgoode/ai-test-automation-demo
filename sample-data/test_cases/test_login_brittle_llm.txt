@@ -1,0 +1,12 @@
+Goal: Demonstrate brittle LLM behavior without IR
+URL: https://ai-test-automation-demo.onrender.com/login
+
+Steps:
+1. Go to the login screen
+2. Put the username in the username box
+3. Put the password in the password box
+4. Hit the button to sign in
+5. Make sure the dashboard shows up
+
+Expected Result:
+The user is logged in and sees the dashboard.

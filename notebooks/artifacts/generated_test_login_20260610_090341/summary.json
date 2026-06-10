@@ -1,0 +1,7 @@
+{
+  "file": "generated_test_login.py",
+  "return_code": 1,
+  "stdout": "",
+  "stderr": "  File \"/Users/jeffreylgoode/Documents/ai-test-automation-demo/notebooks/generated_test_login.py\", line 10\n    await page.fill(\"input[name=\"username\"]\", \"demo\")\n                    ^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: invalid syntax. Perhaps you forgot a comma?\n",
+  "artifacts": "artifacts/generated_test_login_20260610_090341"
+}
