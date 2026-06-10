@@ -30,6 +30,9 @@ def login():
 def dashboard():
     return render_template("dashboard.html")
 
+@app.route("/logout")
+def logout():
+    return redirect(url_for("home"))
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
