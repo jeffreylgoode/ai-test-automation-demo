@@ -113,9 +113,9 @@ Steps:
 ```plaintext
 ai-test-automation-demo/
 │
-├── app-under-test/          # tiny login page
+├── app-under-test/                  # tiny login page
 │
-├── pipeline/                # deterministic pipeline
+├── pipeline/                        # deterministic pipeline
 │   ├── parse.py
 │   ├── interpret.py
 │   ├── map_selectors.py
@@ -123,17 +123,21 @@ ai-test-automation-demo/
 │   ├── run.py
 │   └── pipeline.py
 │
-├── llm-brittle-demo/        # LLM-only baseline
+├── llm-brittle-demo/                # LLM-only baseline
 │   ├── brittle_prompt.txt
 │   ├── brittle_generated_test.py
 │   └── run_brittle.py
+│
+├── notebooks/
+│   └── ai_test_automation_demo.ipynb   # full demo notebook
 │
 ├── sample-data/
 │   └── login_test_case.txt
 │
 └── artifacts/
-    ├── good/                # passing test artifacts
-    └── bad/                 # failing test artifacts
+    ├── good/                        # passing test artifacts
+    └── bad/                         # failing test artifacts
+               # failing test artifacts
 ```
 ## How the LLM‑Only Pipeline Fails
 
