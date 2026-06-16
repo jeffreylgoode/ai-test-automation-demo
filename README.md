@@ -111,33 +111,74 @@ Steps:
 ## Repository Structure
 
 ```plaintext
+```plaintext
 ai-test-automation-demo/
 │
-├── app-under-test/                  # tiny login page
+├── app-under-test/                 # legacy tiny login page
 │
-├── pipeline/                        # deterministic pipeline
-│   ├── parse.py
-│   ├── interpret.py
-│   ├── map_selectors.py
-│   ├── codegen.py
-│   ├── run.py
-│   └── pipeline.py
+├── artifacts/                      # execution artifacts (collapsed)
+│   ├── flask_app_run/              # multiple timestamped runs
+│   └── todomvc_run/
 │
-├── llm-brittle-demo/                # LLM-only baseline
-│   ├── brittle_prompt.txt
-│   ├── brittle_generated_test.py
-│   └── run_brittle.py
+├── artifacts-demo/
+│   └── test_login_valid_credentials/
+│
+├── demo-app/                       # Flask app deployed on Render
+│   ├── app.py
+│   ├── requirements.txt
+│   └── templates/
+│       ├── dashboard.html
+│       ├── index.html
+│       └── login.html
+│
+├── docs/                           # documentation (WIP)
+│
+├── generated-tests/                # deterministic + LLM-generated tests
+│   ├── *_test.py
+│   └── todomvc_*.py
+│
+├── generated-tests-demo/
+│   └── test_login_valid_credentials.py
+│
+├── LICENSE
 │
 ├── notebooks/
-│   └── ai_test_automation_demo.ipynb   # full demo notebook
+│   ├── ai_test_automation_demo.ipynb     # main demo notebook
+│   ├── generated_brittle_test.py
+│   ├── generated_test_login.py
+│   ├── pipeline_test_login.py
+│   ├── pipeline_test_login_llm_brittle.py
+│   ├── pipeline_test_login_llm_real.py
+│   ├── archived/                          # older pipeline notebooks
+│   │   ├── 01 - NL_to_IR.ipynb
+│   │   ├── 02 - IR Visualization.ipynb
+│   │   ├── 03 - Mapping Layer.ipynb
+│   │   ├── 04 - Playwright Code Generation.ipynb
+│   │   ├── 05 - Playwright Execution.ipynb
+│   │   ├── 06 - Artifact Analysis.ipynb
+│   │   ├── Full_Batch_Pipeline.ipynb
+│   │   └── Simple batch file.ipynb
+│   └── artifacts/
+│       ├── brittle/
+│       ├── good/
+│       └── real_llm/
 │
-├── sample-data/
-│   └── login_test_case.txt
+├── README.md
+├── render.yaml
 │
-└── artifacts/
-    ├── good/                        # passing test artifacts
-    └── bad/                         # failing test artifacts
-               # failing test artifacts
+└── sample-data/
+    ├── ir_examples/                 # IR outputs (unmapped + mapped)
+    ├── ir_examples_mapped/
+    ├── mapping_output/
+    │   └── login_mapping.json
+    └── test_cases/
+        ├── test_dashboard_navigation.txt
+        ├── test_home_page.txt
+        ├── test_login_brittle_llm.txt
+        ├── test_login_failure.txt
+        ├── test_login_success.txt
+        └── test_logout_flow.txt
+
 ```
 ## How the LLM‑Only Pipeline Fails
 
