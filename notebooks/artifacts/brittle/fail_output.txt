@@ -1,0 +1,62 @@
+[31mF[0m[31m                                                                        [100%][0m
+=================================== FAILURES ===================================
+[31m[1m_________________________ test_login_flow_llm_brittle __________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_login_flow_llm_brittle[39;49;00m():[90m[39;49;00m
+        [94mwith[39;49;00m sync_playwright() [94mas[39;49;00m p:[90m[39;49;00m
+            browser = p.chromium.launch(headless=[94mFalse[39;49;00m, slow_mo=[94m300[39;49;00m)[90m[39;49;00m
+            page = browser.new_page()[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Force a short timeout so the browser closes quickly[39;49;00m[90m[39;49;00m
+            page.set_default_timeout([94m2000[39;49;00m)  [90m# 2 seconds per step[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+            start = time.time()[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                [90m# LLM-generated (simulated) code — intentionally brittle[39;49;00m[90m[39;49;00m
+                page.goto([33m"[39;49;00m[33mhttps://ai-test-automation-demo.onrender.com/login[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+>               page.fill([33m"[39;49;00m[33m#user[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mdemo[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+
+[1m[31mpipeline_test_login_llm_brittle.py[0m:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m../.venv/lib/python3.11/site-packages/playwright/sync_api/_generated.py[0m:10998: in fill
+    [0m[96mself[39;49;00m._sync([90m[39;49;00m
+[1m[31m../.venv/lib/python3.11/site-packages/playwright/_impl/_page.py[0m:917: in fill
+    [0m[94mreturn[39;49;00m [94mawait[39;49;00m [96mself[39;49;00m._main_frame.fill(**locals_to_params([96mlocals[39;49;00m()))[90m[39;49;00m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31m../.venv/lib/python3.11/site-packages/playwright/_impl/_frame.py[0m:610: in fill
+    [0m[94mawait[39;49;00m [96mself[39;49;00m._fill(**locals_to_params([96mlocals[39;49;00m()))[90m[39;49;00m
+[1m[31m../.venv/lib/python3.11/site-packages/playwright/_impl/_frame.py[0m:622: in _fill
+    [0m[94mawait[39;49;00m [96mself[39;49;00m._channel.send([33m"[39;49;00m[33mfill[39;49;00m[33m"[39;49;00m, [96mself[39;49;00m._timeout, locals_to_params([96mlocals[39;49;00m()))[90m[39;49;00m
+[1m[31m../.venv/lib/python3.11/site-packages/playwright/_impl/_connection.py[0m:69: in send
+    [0m[94mreturn[39;49;00m [94mawait[39;49;00m [96mself[39;49;00m._connection.wrap_api_call([90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <playwright._impl._connection.Connection object at 0x10444e410>
+cb = <function Channel.send.<locals>.<lambda> at 0x104455e40>
+is_internal = False, title = None
+
+    [0m[94masync[39;49;00m [94mdef[39;49;00m[90m [39;49;00m[92mwrap_api_call[39;49;00m([90m[39;49;00m
+        [96mself[39;49;00m, cb: Callable[[], Any], is_internal: [96mbool[39;49;00m = [94mFalse[39;49;00m, title: [96mstr[39;49;00m = [94mNone[39;49;00m[90m[39;49;00m
+    ) -> Any:[90m[39;49;00m
+        [94mif[39;49;00m [96mself[39;49;00m._api_zone.get():[90m[39;49;00m
+            [94mreturn[39;49;00m [94mawait[39;49;00m cb()[90m[39;49;00m
+        task = asyncio.current_task([96mself[39;49;00m._loop)[90m[39;49;00m
+        st: List[inspect.FrameInfo] = [96mgetattr[39;49;00m([90m[39;49;00m
+            task, [33m"[39;49;00m[33m__pw_stack__[39;49;00m[33m"[39;49;00m, [94mNone[39;49;00m[90m[39;49;00m
+        ) [95mor[39;49;00m inspect.stack([94m0[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        parsed_st = _extract_stack_trace_information_from_stack(st, is_internal, title)[90m[39;49;00m
+        [96mself[39;49;00m._api_zone.set(parsed_st)[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            [94mreturn[39;49;00m [94mawait[39;49;00m cb()[90m[39;49;00m
+        [94mexcept[39;49;00m [96mException[39;49;00m [94mas[39;49;00m error:[90m[39;49;00m
+>           [94mraise[39;49;00m rewrite_error(error, [33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00mparsed_st[[33m'[39;49;00m[33mapiName[39;49;00m[33m'[39;49;00m][33m}[39;49;00m[33m: [39;49;00m[33m{[39;49;00merror[33m}[39;49;00m[33m"[39;49;00m) [94mfrom[39;49;00m[90m [39;49;00m[94mNone[39;49;00m[90m[39;49;00m
+[1m[31mE           playwright._impl._errors.TimeoutError: Page.fill: Timeout 2000ms exceeded.[0m
+[1m[31mE           Call log:[0m
+[1m[31mE             - waiting for locator("#user")[0m
+
+[1m[31m../.venv/lib/python3.11/site-packages/playwright/_impl/_connection.py[0m:559: TimeoutError
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m pipeline_test_login_llm_brittle.py::[1mtest_login_flow_llm_brittle[0m - playwright._impl._errors.TimeoutError: Page.fill: Timeout 2000ms exceeded.
+[31m[31m[1m1 failed[0m[31m in 8.01s[0m[0m

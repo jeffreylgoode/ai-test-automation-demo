@@ -1,0 +1,23 @@
+
+==================================== ERRORS ====================================
+[31m[1m_______________ ERROR collecting pipeline_test_login_llm_real.py _______________[0m
+[1m[31mpipeline_test_login_llm_real.py[0m:21: in <module>
+    [0mpage.wait_for_selector([33m'[39;49;00m[33m[data-testid=[39;49;00m[33m"[39;49;00m[33mdashboard_heading[39;49;00m[33m"[39;49;00m[33m][39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+[1m[31m../.venv/lib/python3.11/site-packages/playwright/sync_api/_generated.py[0m:8770: in wait_for_selector
+    [0m[96mself[39;49;00m._sync([90m[39;49;00m
+[1m[31m../.venv/lib/python3.11/site-packages/playwright/_impl/_page.py[0m:424: in wait_for_selector
+    [0m[94mreturn[39;49;00m [94mawait[39;49;00m [96mself[39;49;00m._main_frame.wait_for_selector(**locals_to_params([96mlocals[39;49;00m()))[90m[39;49;00m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31m../.venv/lib/python3.11/site-packages/playwright/_impl/_frame.py[0m:372: in wait_for_selector
+    [0m[94mawait[39;49;00m [96mself[39;49;00m._channel.send([90m[39;49;00m
+[1m[31m../.venv/lib/python3.11/site-packages/playwright/_impl/_connection.py[0m:69: in send
+    [0m[94mreturn[39;49;00m [94mawait[39;49;00m [96mself[39;49;00m._connection.wrap_api_call([90m[39;49;00m
+[1m[31m../.venv/lib/python3.11/site-packages/playwright/_impl/_connection.py[0m:559: in wrap_api_call
+    [0m[94mraise[39;49;00m rewrite_error(error, [33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00mparsed_st[[33m'[39;49;00m[33mapiName[39;49;00m[33m'[39;49;00m][33m}[39;49;00m[33m: [39;49;00m[33m{[39;49;00merror[33m}[39;49;00m[33m"[39;49;00m) [94mfrom[39;49;00m[90m [39;49;00m[94mNone[39;49;00m[90m[39;49;00m
+[1m[31mE   playwright._impl._errors.TimeoutError: Page.wait_for_selector: Timeout 30000ms exceeded.[0m
+[1m[31mE   Call log:[0m
+[1m[31mE     - waiting for locator("[data-testid=\"dashboard_heading\"]") to be visible[0m
+[36m[1m=========================== short test summary info ============================[0m
+[31mERROR[0m pipeline_test_login_llm_real.py - playwright._impl._errors.TimeoutError: Page.wait_for_selector: Timeout 3000...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+[31m[31m[1m1 error[0m[31m in 31.82s[0m[0m
